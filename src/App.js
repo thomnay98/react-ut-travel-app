@@ -14,7 +14,7 @@ import Error from './pages/Error';
 function App() {
 
   useEffect(() => {
-    document.title = "This is a title"
+    document.title = "UT Travel"
   }, [])
   
   return (
