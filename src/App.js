@@ -1,5 +1,6 @@
 import './App.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import React, { useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
@@ -11,6 +12,11 @@ import TourDetail from './pages/TourDetail';
 import Error from './pages/Error';
 
 function App() {
+
+  useEffect(() => {
+    document.title = "This is a title"
+  }, [])
+  
   return (
     <>
       <Navbar />
