@@ -8,14 +8,14 @@ import TourContainer from '../components/TourContainer';
 class Tours extends Component {
     render() {
         return (
-            <>
+            <div className="container">
                 <TopBgImg styleBg="tourBgImg">
                     <TopBanner title="Các tour du lịch chúng tôi cung cấp">
                         <Link to="/" className="btn-primary">Về trang chủ</Link>
                     </TopBanner>
                 </TopBgImg>
                 <TourContainer />
-            </>
+            </div>
         );
     }
 }

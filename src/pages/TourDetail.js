@@ -31,17 +31,17 @@ class TourDetail extends Component {
             return (
                 <div className="error">
                     <h3>Không tìm thấy tour...</h3>
-                    <Link to="/tours" className="btn-primary">Tìm Tour</Link>
+                    <Link to="/tour-du-lich" className="btn-primary">Tìm Tour</Link>
                 </div>
             )
         }
         const { name, intro, start, price, time, vehicle, activity, images } = tour;
 
         return (
-            <>  
+            <div className="container">  
                 <StyledTopImg img={images[0]}>
                     <Banner title={name}>
-                        <Link to="/tours" className="btn-primary">
+                        <Link to="/tour-du-lich" className="btn-primary">
                             Tìm tour khác
                         </Link>
                     </Banner>
@@ -52,8 +52,8 @@ class TourDetail extends Component {
                             <Carousel
                                     showArrows={false} 
                                     autoPlay 
-                                    interval="3000" 
-                                    transitionTime="3000"
+                                    interval="2000" 
+                                    transitionTime="1000"
                             >
                                 {images.map((item, index) => {
                                     return (
@@ -126,7 +126,7 @@ class TourDetail extends Component {
                         </div>
                     </div>
                 </section>
-            </>
+            </div>
         );
     }
 }

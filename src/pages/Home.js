@@ -20,7 +20,7 @@ class Home extends Component {
         let { toursHot: tours } = this.context;
         if(tours.length > 0){
             return (
-                <>
+                <div className="container">
                     <TopBgImg>
                         <TopBanner title={`Du lịch ${tours[1].name}`} subTitle={`Trọn gói chỉ ${formatNumber(tours[1].price)} đ`}>
                             <Link to={`/tour-du-lich/${tours[1].slug}`} className="btn-primary">Chi tiết</Link>
@@ -29,18 +29,18 @@ class Home extends Component {
                     <Services />
                     <HotTours />
                     <NewTours />
-                </>
+                </div>
             )
         }
 
         return (
-            <>
+            <div className="container">
                 <TopBgImg>
                 </TopBgImg>
                 <Services />
                 <HotTours />
                 <NewTours />
-            </>
+            </div>
         );
     }
 }

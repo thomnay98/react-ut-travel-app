@@ -16,6 +16,10 @@ body {
   line-height: 1.4;
 }
 
+.container{
+  min-height: 80vh;
+}
+
 h1 {
   font-size: 3em;
   line-height: 1;
@@ -80,7 +84,7 @@ h6 {
   letter-spacing: 2px;
 }
 .footer {
-  background-color: #cfcfcf;
+  background-color: wheat;
   padding: 1rem 0;
   
 }
@@ -90,8 +94,25 @@ h6 {
 .footer-icon a {
   display: inline-block;
   margin: auto 1rem;
-  color: var(--blue-color);
   font-size: 3rem;
+  opacity: .7;
+  transition: .5s;
+}
+.footer-icon a:nth-child(1){
+  color: rgb(57, 90, 154);
+}
+.footer-icon a:nth-child(2){
+  color: rgb(32, 31, 31);
+}
+.footer-icon a:nth-child(3){
+  color: rgb(0, 115, 177);
+}
+.footer-icon a:nth-child(4){
+  color: rgb(0, 175, 240);
+}
+.footer-icon a:hover{
+  opacity: 1;
+  transform: scale(1.1);
 }
 /* Navbar */
 .navbar {
@@ -100,7 +121,7 @@ h6 {
   left: 0;
   width: 100%;
   padding: 0.75rem 2rem;
-  background: #cfcfcf;
+  background: wheat;
   z-index: 1;
 }
 .nav-header {
@@ -142,7 +163,7 @@ h6 {
   letter-spacing: 2px;
 }
 .nav-links a:hover {
-  color: var(--primaryColor);
+  color: var(--blue-color);
 }
 .show-nav {
   height: 160px;

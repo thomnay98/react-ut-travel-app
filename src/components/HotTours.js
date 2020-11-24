@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense, lazy } from 'react';
 
 import { TourContext } from '../context';
 
 import Title from './Title';
 import Loading from './Loading';
-import Tour from './Tour';
+// import Tour from './Tour';
+
+const Tour = lazy(()=>import('./Tour'));
 
 class HotTours extends Component {
 
@@ -14,7 +16,11 @@ class HotTours extends Component {
 
         let { loading, toursHot: tours } = this.context;
         tours = tours.map(tour => {
-            return <Tour key={tour.id} tour={tour} />
+            return (
+                <Suspense fallback={<Loading />}>
+                    <Tour key={tour.id} tour={tour} />
+                </Suspense>
+            )
         })
 
         return (

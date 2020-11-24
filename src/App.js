@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import Tours from './pages/Tours';
 import TourDetail from './pages/TourDetail';
 import Error from './pages/Error';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
 
@@ -19,15 +20,17 @@ function App() {
   
   return (
     <>
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/tour-du-lich" component={Tours} />
-        <Route exact path="/tour-du-lich/:slug" component={TourDetail} />
-        <Route exact path="/lien-he" component={Contact} />
-        <Route path="/" component={Error} />
-      </Switch>
-      <Footer />
+      <ScrollToTop>
+        <Navbar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/tour-du-lich" component={Tours} />
+            <Route exact path="/tour-du-lich/:slug" component={TourDetail} />
+            <Route exact path="/lien-he" component={Contact} />
+            <Route path="/" component={Error} />
+          </Switch>
+        <Footer />
+      </ScrollToTop>
     </>
   );
 }
